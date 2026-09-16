@@ -1,0 +1,36 @@
+name: disk-tracker
+services:
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    networks:
+      - dt-network
+    volumes:
+      - ./mongo/data:/data/db
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - "3001:3001"
+    networks:
+      - dt-network
+    volumes:
+      - ./api/src:/app/src
+      - ./api/dist:/app/dist
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    networks:
+      - dt-network
+    volumes:
+      - ./client/src:/app/src
+networks:
+  dt-network:
+    driver: bridge

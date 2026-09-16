@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --color-ink-black-50: #e5f7ff;
+    --color-ink-black-100: #ccf0ff;
+    --color-ink-black-200: #99e0ff;
+    --color-ink-black-300: #66d1ff;
+    --color-ink-black-400: #33c2ff;
+    --color-ink-black-500: #00b2ff;
+    --color-ink-black-600: #008fcc;
+    --color-ink-black-700: #006b99;
+    --color-ink-black-800: #004766;
+    --color-ink-black-900: #002433;
+    --color-ink-black-950: #001924;
+
+    --color-sunlit-clay-50: #fbf4e9;
+    --color-sunlit-clay-100: #f7e8d4;
+    --color-sunlit-clay-200: #f0d2a8;
+    --color-sunlit-clay-300: #e8bb7d;
+    --color-sunlit-clay-400: #e0a552;
+    --color-sunlit-clay-500: #d98e26;
+    --color-sunlit-clay-600: #ad721f;
+    --color-sunlit-clay-700: #825517;
+    --color-sunlit-clay-800: #57390f;
+    --color-sunlit-clay-900: #2b1c08;
+    --color-sunlit-clay-950: #1e1405;
+
+    --font-alata: 'Alata', sans-serif;
+}
