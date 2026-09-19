@@ -1,5 +1,6 @@
 import { AxiosResponse } from "axios";
 import { fetcher } from "../lib/fetch";
+import { BASE_URL } from "./user";
 
 export type MyDisk = {
   id: string;
@@ -8,8 +9,6 @@ export type MyDisk = {
   releaseDate: string;
   cover_art: string;
 };
-
-const BASE_URL = "http://localhost:3001";
 
 export const getMyDisks = async () =>
   await fetcher<MyDisk[]>(`${BASE_URL}/my-disks`);

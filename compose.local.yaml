@@ -1,0 +1,13 @@
+name: disk-tracker
+services:
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    networks:
+      - dt-network
+    volumes:
+      - ./mongo/data:/data/db
+networks:
+  dt-network:
+    driver: bridge
