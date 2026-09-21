@@ -19,8 +19,8 @@ app.use(
 );
 app.use(cookieParser());
 
-app.use("/auth", authRoutes);
-app.use("/user", authenticate, userRoutes);
+app.use("/api/auth", authRoutes);
+app.use("/api/user", authenticate, userRoutes);
 
 app.get("/my-disks", (req, res) => {
   const data = generateFakeData(100);

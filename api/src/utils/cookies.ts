@@ -6,7 +6,8 @@ export const REFRESH_PATH = "/auth/refresh";
 const defaults: CookieOptions = {
   sameSite: "strict",
   httpOnly: true,
-  secure: true,
+  secure: false,
+  path: "/",
 };
 
 export const getAccessTokenCookieOptions = (): CookieOptions => ({
