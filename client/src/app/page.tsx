@@ -11,9 +11,9 @@ export default async function Page() {
     return <div>error</div>;
   }
 
-  if (!user) {
-    redirect("/auth/login", RedirectType.replace);
-  }
+  // if (!user) {
+  //   redirect("/auth/login", RedirectType.replace);
+  // }
 
   return <div>home</div>;
 }

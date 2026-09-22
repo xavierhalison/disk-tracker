@@ -6,5 +6,4 @@ export async function login(formData: FormData) {
   const password = formData.get("password") + "";
 
   await loginUser(email, password);
-  // return user;
 }

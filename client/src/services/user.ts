@@ -1,3 +1,5 @@
+import { cookies } from "next/headers";
+
 export type User = {
   _id: string;
   email: string;
@@ -9,7 +11,13 @@ export type User = {
 export const BASE_URL = "http://localhost:3001";
 
 export const getCurrentUser = async (): Promise<User | null> => {
-  const res = await fetch(`${BASE_URL}/user`, { credentials: "include" });
+  const cookieStore = await cookies();
+
+  const res = await fetch(`${BASE_URL}/user`, {
+    credentials: "include",
+    headers: { Cookie: cookieStore.toString() },
+  });
+
   if (!res.ok) return null;
   return res.json();
 };
