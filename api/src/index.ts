@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "http://localhost:5173",
     credentials: true,
   }),
 );
@@ -32,8 +32,7 @@ app.get("/my-disks/:id", (req, res) => {
   res.status(200).json(data);
 });
 
-app.listen(3001, async () => {
-  console.log("Server is running on port 3001");
+app.listen(3000, async () => {
+  console.log("Server is running on port 3000");
   await connectToDatabase();
 });
-console.log("hot-reload-2");
